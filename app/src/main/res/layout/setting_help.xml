@@ -1,0 +1,96 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_setting_help"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_setting_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Поддержка"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/image_help"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_help_screen"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"/>
+
+    <TextView
+        android:layout_above="@+id/open_WhatsApp_help"
+        android:id="@+id/text_help"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorOnSecondary"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="СВЯЖИСЬ СО МНОЙ"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"/>
+
+    <Button
+        android:layout_above="@+id/open_telegram_help"
+        android:id="@+id/open_WhatsApp_help"
+        android:layout_centerHorizontal="true"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="WhatsApp"
+        android:drawableLeft="@drawable/ic_whatsapp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg"
+        android:elevation="0dp"/>
+
+    <Button
+        android:layout_above="@+id/open_mail_help"
+        android:id="@+id/open_telegram_help"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="Telegram"
+        android:drawableLeft="@drawable/ic_telegram"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg"
+        android:elevation="0dp"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/open_mail_help"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:drawableLeft="@drawable/ic_mail_white"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg"
+        android:elevation="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="100dp"/>
+
+</RelativeLayout>

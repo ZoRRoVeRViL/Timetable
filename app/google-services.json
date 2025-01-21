@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "437587111951",
+    "project_id": "timetable-studcal",
+    "storage_bucket": "timetable-studcal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437587111951:android:bf9336778ff4a1d12ff37a",
+        "android_client_info": {
+          "package_name": "com.example.timetable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437587111951-hdv9od6rd97cnqmud6a6psse3h85ang5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr1ZtR3W0ZkdQJts4ngYgTdpQLKGP_UiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437587111951-hdv9od6rd97cnqmud6a6psse3h85ang5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

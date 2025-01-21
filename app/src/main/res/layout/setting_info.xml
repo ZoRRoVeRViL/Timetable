@@ -1,0 +1,421 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_setting_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_setting_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="О приложении"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@+id/app_bar_setting_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/about_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Подробная информация"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Studcal - это современное и инновационное приложение, созданное специально для студентов, чтобы облегчить им организацию и планирование учебной жизни. Это инструмент, который поможет студентам эффективно управлять своим расписанием занятий и задачами, а также с легкостью взаимодействовать с соучастниками учебного процесса. Studcal - это надежный спутник в учебе, который поможет студентам эффективно управлять своим временем, планировать учебные задачи и успешно справляться с учебной нагрузкой. Дайте своей учебной жизни новое направление с Studcal! \nПытаетесь прогулять пары и скрыть это от родителей? С этим приложением такое у вас не получится."
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Я надеюсь, что приложение сделает ваш учебный опыт более удобным и организованным."
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Возможности:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Отображение актуального расписания занятий и лекций."
+                android:layout_marginBottom="4dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Возможность добавления и редактирования заданий."
+                android:layout_marginBottom="4dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Уведомления о предстоящих занятиях и событиях."
+                android:layout_marginBottom="4dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Просмотр подробной информации о преподавателях"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Версии и обновления:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Текущая версия:"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Согласие на обработку данных:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ваша конфиденциальность важна для нас. Пожалуйста, ознакомьтесь с нашей политикой конфиденциальности. Найти его можно на сайте google.com, введите в строке поиска следующий текст - Согласие на обработку данных"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Лицензия и авторские права:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Все права незащищены. © 2023 Тот кто это сделал"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ссылки на социальные сети и сайт университета:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Подписывайтесь на наши страницы в социальных сетях для получения обновлений и новостей:"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Facebook: запрещено на территории РФ"
+                android:layout_marginBottom="4dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Instagram: запрещено на территории РФ"
+                android:layout_marginBottom="4dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Веб-сайт: https://www.s-vfu.ru/"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Благодарности:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Благодарим нашу команду разработчиков в лице себя и всех себя, кто помогал в создании этого приложения."
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Полезные советы:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Для открытия приложения надо нажать на иконки приложения в меню телефона"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Для тебя студент:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Наши мозги булькают и код пульсирует, создавая это волшебное приложение для вас! 🚀"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Приложение, которое поможет вам не заплутать в университетских лабиринтах и дебрях расписания. 🎓"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Счастливые студенты, яркие лекции и неожиданные контрольные – будьте готовы ко всему! 📚✨"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Забудьте о бумажных блокнотах с нашим приложением! 🎉"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Это приложение было создано с любовью, кофе и кучей странных шуток специально для тебя. ☕💻😄"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Стоит ли выполнять домашнее задание? Вероятность: 50% – либо стоит, либо тебе 2! 🤷‍♂️ (но мне было лень)"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Не пугайтесь экзаменов – это просто тест для определения достоин ли ты стипендии! 💪📝"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Научные исследования показали, что использование этого приложения увеличивает успехи в учебе на 200%! (Не нашли исследования? Ну, так и не искали! 😄)"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="С этим приложением вы всегда будете знать, где и когда нужно быть, но все равно опоздаете или пропустите! 🦸‍♂️📆"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Не забывайте заглядывать в приложение – оно не только о расписании, но и о ваших пропущенных ханятиях! 🌟🎒"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Почему студент всегда уверен в своем успехе? Потому что он заранее Studcal-кулировал свои планы! 😄"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Студенты говорят, что Studcal - это как GPS для успеха. Теперь можно не потеряться на пути к знаниям! 🌟🗺️"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Приложение, которое смотрит в будущее (и помогает не забыть о предстоящих уроках). Ох, какое предвидение! 🔮📅"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Спасибо, что вы часть нашей университетской семьи! 🎈"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Спасибо за то, что делаете наше приложение частью своей учебной жизни. Давайте сделаем ее яркой и веселой! 🎈📘"
+                android:layout_marginBottom="10dp"
+                android:textColor="?attr/colorOnSurface"
+                android:hyphenationFrequency="full"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Спасибо, что выбрали наше приложение!"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From SoloDev"
+                android:gravity="center"
+                android:layout_marginBottom="6dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/num_lesson_item_widget_1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="№"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:background="@drawable/item_time_table_item_2"
+            android:textColor="@color/white"
+            android:paddingStart="20dp"
+            android:paddingEnd="14dp" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/num_lesson_item_widget_1"
+            android:id="@+id/time_lesson_item_widget_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Время"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_item_time_table_item_widget_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="8dp"
+        android:descendantFocusability="blocksDescendants"
+        android:background="@drawable/widget_timetable_background">
+
+        <TextView
+            android:text="Предмет"
+            android:id="@+id/name_lesson_item_widget_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:text="тип"
+            android:id="@+id/form_lesson_item_widget_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginHorizontal="12dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/src_teacher_lesson_item_widget_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_person"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:text="Преподователь"
+                android:id="@+id/teacher_lesson_item_widget_1"
+                android:layout_toEndOf="@+id/src_teacher_lesson_item_widget_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/src_auditorium_lesson_item_widget_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_location"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:text="Аудитория"
+                android:id="@+id/auditorium_lesson_item_widget_1"
+                android:layout_toEndOf="@+id/src_auditorium_lesson_item_widget_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

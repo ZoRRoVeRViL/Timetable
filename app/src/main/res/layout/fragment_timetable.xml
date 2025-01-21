@@ -1,0 +1,168 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_timetable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_timetable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:subtitleTextColor="@color/white"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <include layout="@layout/time_table_custom_toolbar" />
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/progress_bar_timetable"
+                style="@style/SpinKitView.Small.Wave"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@+id/toolbar_title"
+                android:layout_marginStart="26dp"
+                android:layout_centerVertical="true"
+                app:SpinKit_Color="@color/white"
+                android:visibility="gone" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <WebView
+        android:visibility="gone"
+        android:id="@+id/webView_timetable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_below="@+id/app_bar_timetable"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout_timetable"
+        app:elevation="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="3dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="?attr/colorOnSecondary"
+                android:id="@+id/day_week"
+                android:text="Сегодняшняя дата"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/first_press_fragment_timetable"
+                android:layout_toEndOf="@+id/day_week"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_arrow_small"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/no_internet_fragment_timetable"
+                android:layout_toEndOf="@+id/day_week"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20sp"
+                    android:src="@drawable/ic_no_internet"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginVertical="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="чётность недели"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"
+                android:id="@+id/even_uneven"
+                android:gravity="end"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_layout_timetable"
+            app:tabGravity="fill"
+            android:background="@color/white"
+            app:tabTextColor="?attr/colorOnSecondary"
+            app:tabSelectedTextColor="@color/white"
+            app:tabBackground="@drawable/tab_background_selector"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabIndicator="@null"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_timetable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_layout_timetable"/>
+
+    <TextView
+        android:id="@+id/log_text_view_timetable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:text="Логи:"
+        android:textSize="9sp"
+        android:background="#F60000"
+        android:fontFamily="monospace"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>

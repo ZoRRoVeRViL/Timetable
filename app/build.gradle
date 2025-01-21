@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 34
+
+    buildToolsVersion '34.0.0'
+
+    defaultConfig {
+        applicationId "com.example.timetable"
+        minSdk 33
+        targetSdk 34
+        versionCode 1
+        versionName "0.5.1-beta.4"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    namespace 'com.example.timetable'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'  // Обновлено до последней версии
+    implementation 'com.google.android.material:material:1.12.0'  // Обновлено до последней версии
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // Обновлено до последней версии
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'  // Последняя доступная версия
+    implementation 'com.google.firebase:firebase-database:21.0.0'  // Обновлено до последней версии
+    testImplementation 'junit:junit:4.13.2'  // Последняя стабильная версия
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'  // Обновлено до последней версии
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'  // Обновлено до последней версии
+
+    implementation 'org.jsoup:jsoup:1.18.1'  // Обновлено до последней версии
+    def nav_version = "2.7.0"  // Обновлено до последней версии
+    implementation "androidx.navigation:navigation-fragment:2.8.1"
+    implementation "androidx.navigation:navigation-ui:2.8.1"
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'  // Обновлено до последней версии
+    implementation 'com.github.bumptech.glide:glide:4.16.0'  // Обновлено до последней версии
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    // Обновлено до последней версии
+    implementation 'com.google.code.gson:gson:2.11.0'  // Обновлено до последней версии
+    implementation 'androidx.cardview:cardview:1.0.0'  // Последняя доступная версия
+
+    implementation 'androidx.work:work-runtime:2.9.0'
+}

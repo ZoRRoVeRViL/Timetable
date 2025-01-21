@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_item_union"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="30dp"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical|start">
+
+        <TextView
+            android:id="@+id/union_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Подразделения"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondary"
+            android:gravity="center_vertical|start"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/union_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Изменения"
+            android:textSize="11sp"
+            android:textColor="?attr/colorOnSurface"
+            android:gravity="center_vertical|start"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginStart="30dp"/>
+
+</LinearLayout>

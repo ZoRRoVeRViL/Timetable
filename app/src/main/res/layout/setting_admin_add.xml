@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_admin_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_admin_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Добавить админа"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/app_bar_admin_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="70dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image_help"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_add_admin"
+            android:layout_marginBottom="30dp"/>
+
+        <EditText
+            android:id="@+id/edit_id_user_admin_add"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="UID..."
+            android:textStyle="normal"
+            android:textColor="?attr/colorOnSecondary"
+            android:background="@drawable/tab_layout_background_form_2"
+            android:textSize="18sp"
+            android:textColorHint="@color/gray"
+            android:maxLines="1"
+            android:inputType="number"
+            android:maxLength="17"
+            android:paddingHorizontal="15dp"/>
+
+        <Spinner
+            android:layout_marginVertical="20dp"
+            android:id="@+id/spinner_post_admin_add"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/tab_layout_background_form_2"
+            android:layout_marginBottom="18dp"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button_admin_add"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Добавить"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg"
+            android:elevation="0dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

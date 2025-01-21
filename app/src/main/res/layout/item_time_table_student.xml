@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/num_lesson_item_timetable_student"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="№"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:background="@drawable/item_time_table_item_2"
+                android:textColor="@color/white"
+                android:paddingStart="24dp"
+                android:paddingEnd="18dp" />
+
+            <TextView
+                android:layout_toEndOf="@+id/num_lesson_item_timetable_student"
+                android:id="@+id/time_lesson_item_timetable_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Время"
+                android:textStyle="normal"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardView_item_time_table_item_timetable_student"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="12dp"
+            card_view:cardBackgroundColor="@color/white_gray"
+            card_view:cardCornerRadius="10dp"
+            card_view:contentPadding="0dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:descendantFocusability="blocksDescendants"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:text="Предмет"
+                    android:id="@+id/name_lesson_item_timetable_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:text="тип"
+                    android:id="@+id/form_lesson_item_timetable_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/src_teacher_lesson_item_timetable_student"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_person"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:text="Преподователь"
+                        android:id="@+id/teacher_lesson_item_timetable_student"
+                        android:layout_toEndOf="@+id/src_teacher_lesson_item_timetable_student"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/src_auditorium_lesson_item_timetable_student"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_location"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:text="Аудитория"
+                        android:id="@+id/auditorium_lesson_item_timetable_student"
+                        android:layout_toEndOf="@+id/src_auditorium_lesson_item_timetable_student"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

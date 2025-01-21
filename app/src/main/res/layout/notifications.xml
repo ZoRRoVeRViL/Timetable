@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_notification"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Объявления"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_above="@+id/open_url_notification"
+        android:layout_below="@+id/app_bar_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relative_notification"
+            android:layout_marginVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/button_back_notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_back"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:background="@drawable/ripple_circle"/>
+
+            <TextView
+                android:layout_toEndOf="@+id/button_back_notification"
+                android:id="@+id/type_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Тип"
+                android:textStyle="normal"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:gravity="center_vertical"
+                android:hyphenationFrequency="full"
+                android:layout_centerVertical="true"/>
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:visibility="gone"
+                android:id="@+id/progress_bar_notification"
+                style="@style/SpinKitView.Wave"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:SpinKit_Color="?attr/colorPrimary"
+                android:layout_toEndOf="@+id/type_notification"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/no_internet_notification"
+                android:layout_toEndOf="@+id/type_notification"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_no_internet"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/button_delete_notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_delete"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:layout_toStartOf="@+id/button_save_notification"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:background="@drawable/ripple_circle"/>
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/button_save_notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_check"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/button_share_notification"
+                android:gravity="center_vertical"
+                android:background="@drawable/ripple_circle"/>
+
+            <ImageView
+                android:id="@+id/button_share_notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_share"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/ripple_circle"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/relative_notification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="23dp">
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/name_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Заголовок"
+                android:textStyle="normal"
+                android:textColor="?attr/colorOnSecondary"
+                android:background="@color/white"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray"
+                android:maxLines="1"
+                android:inputType="text|textCapSentences"
+                android:hyphenationFrequency="full"/>
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/time_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Время"
+                android:textStyle="normal"
+                android:textColor="?attr/colorOnSurface"
+                android:background="@color/white"
+                android:textSize="13sp"
+                android:textColorHint="@color/gray"
+                android:maxLines="1"
+                android:inputType="text|textCapSentences"
+                android:hyphenationFrequency="full"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/LinearLayout_url_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ссылка: "
+                    android:textStyle="normal"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="13sp"
+                    android:hyphenationFrequency="full"/>
+
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/url_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ссылка"
+                    android:inputType="textUri"
+                    android:textStyle="normal"
+                    android:textColor="?attr/colorOnSurface"
+                    android:background="@color/white"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:textColorHint="@color/gray"
+                    android:hyphenationFrequency="full"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/id_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UID"
+                android:textStyle="normal"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="13sp"
+                android:hyphenationFrequency="full"/>
+
+            <View
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/RelativeLayout_verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/text_verification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Статус модерации"
+                    android:textStyle="normal"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="13sp"
+                    android:hyphenationFrequency="full"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:id="@+id/button_not_verified"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_red_x"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/button_verified"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/ripple_circle"/>
+
+                <ImageView
+                    android:id="@+id/button_verified"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_green_check"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/ripple_circle"/>
+
+            </RelativeLayout>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/verification_view"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:id="@+id/linear_layout_edit_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/edit_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Основной текст..."
+                    android:textStyle="normal"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:textColorHint="@color/gray"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:hyphenationFrequency="full"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:visibility="gone"
+        android:layout_marginVertical="5dp"
+        android:id="@+id/open_url_notification"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перейти по ссылке"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg"
+        android:elevation="0dp"/>
+
+</RelativeLayout>

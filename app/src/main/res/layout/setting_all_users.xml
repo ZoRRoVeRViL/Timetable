@@ -1,0 +1,196 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_setting_all_users"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_setting_all_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Пользователи"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progress_bar_setting_all_users"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="?attr/colorPrimary"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/no_internet_setting_all_users"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_no_internet"
+            android:padding="5dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:text="Нет интернета"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/LinearLayout_all_users"
+        android:layout_below="@+id/app_bar_setting_all_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/txt_count_all_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Всего пользователей:"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondary"/>
+
+        <TextView
+            android:id="@+id/count_all_users"
+            android:layout_toEndOf="@+id/txt_count_all_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="7dp"/>
+
+        <TextView
+            android:layout_below="@+id/txt_count_all_users"
+            android:id="@+id/txt_count_students_all_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Студентов:"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_below="@+id/txt_count_all_users"
+            android:id="@+id/count_students_all_users"
+            android:layout_toEndOf="@+id/txt_count_students_all_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="7dp"/>
+
+        <TextView
+            android:layout_below="@+id/txt_count_students_all_users"
+            android:id="@+id/txt_count_teachers_all_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Преподователей:"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_below="@+id/txt_count_students_all_users"
+            android:id="@+id/count_teachers_all_users"
+            android:layout_toEndOf="@+id/txt_count_teachers_all_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="7dp"/>
+
+        <View
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/txt_count_teachers_all_users"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/LinearLayout_all_users"
+        android:id="@+id/LinearLayout_all_users1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Студенты:"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingLeft="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Преподователи:"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingLeft="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/LinearLayout_all_users1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_setting_all_users_students"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clipToPadding="false"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_setting_all_users_teachers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clipToPadding="false"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_notifications_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_notifications_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Объявления"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/app_bar_notifications_add"
+        android:id="@+id/relative_notifications_add"
+        android:layout_marginVertical="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/button_back_notifications_add"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/ripple_circle"/>
+
+        <TextView
+            android:layout_toEndOf="@+id/button_back_notifications_add"
+            android:id="@+id/text_name_notifications_add"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Тип объявления"
+            android:textStyle="normal"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:hyphenationFrequency="full"
+            android:layout_centerVertical="true"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:visibility="gone"
+            android:id="@+id/progress_bar_notifications_add"
+            style="@style/SpinKitView.Wave"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="?attr/colorPrimary"
+            android:layout_toEndOf="@+id/text_name_notifications_add"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/no_internet_notifications_add"
+            android:layout_toEndOf="@+id/text_name_notifications_add"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_internet"
+                android:padding="5dp"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/button_save_notifications_add"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_check"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/ripple_circle"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/relative_notifications_add"
+        android:id="@+id/View_notifications_add"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_below="@+id/View_notifications_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/edit_name_notifications_add"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="Заголовок..."
+            android:textStyle="normal"
+            android:textColor="?attr/colorOnSecondary"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:textColorHint="@color/gray"
+            android:inputType="text|textCapSentences"
+            android:maxLines="1"
+            android:maxLength="25"/>
+
+        <EditText
+            android:id="@+id/edit_time_notifications_add"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="Время..."
+            android:textStyle="normal"
+            android:textColor="?attr/colorOnSecondary"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:textColorHint="@color/gray"
+            android:inputType="text|textCapSentences"
+            android:maxLines="1"
+            android:maxLength="25"/>
+
+        <EditText
+            android:id="@+id/edit_url_notifications_add"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="Ссылка..."
+            android:textStyle="normal"
+            android:textColor="?attr/colorOnSecondary"
+            android:inputType="textUri"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:textColorHint="@color/gray"
+            android:maxLines="1"
+            android:maxLength="25"/>
+
+        <View
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_edit_notifications_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edit_description_notifications_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Описание..."
+                android:textStyle="normal"
+                android:textColor="?attr/colorOnSecondary"
+                android:background="@color/white"
+                android:textSize="16sp"
+                android:textColorHint="@color/gray"
+                android:inputType="textMultiLine|textCapSentences"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

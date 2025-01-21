@@ -1,0 +1,301 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_setting_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:background="?attr/colorPrimaryVariant">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_setting_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Профиль"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="?attr/colorPrimaryVariant"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/app_bar_setting_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/postProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Должность:"
+            android:textSize="13sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/post_setting_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_below="@id/postProfile"/>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_role_setting_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/post_setting_profile"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Роль:"
+                    android:textSize="13sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/role_setting_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="?attr/colorOnSecondary"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginEnd="15dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_gravity="center_vertical|end"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/instituteLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Учебное подразделение:"
+            android:textSize="13sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_below="@id/LinearLayout_role_setting_profile"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/institute_setting_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_below="@id/instituteLabel"/>
+
+        <TextView
+            android:id="@+id/groupLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Учебная группа:"
+            android:textSize="13sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_below="@id/institute_setting_profile"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/group_setting_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_below="@id/groupLabel"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/LinearLayout_id_setting_profile"
+            android:layout_below="@id/group_setting_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="СВФУ id:"
+                android:textSize="13sp"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/id_setting_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:textColor="?attr/colorOnSecondary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_UID_setting_profile"
+            android:layout_below="@id/LinearLayout_id_setting_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Уникальный id:"
+                    android:textSize="13sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/UID_setting_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="?attr/colorOnSecondary"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginEnd="15dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_gravity="center_vertical|end"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reg_dateLabel"
+            android:layout_below="@id/LinearLayout_UID_setting_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата регистрации:"
+            android:textSize="13sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/registration_date_setting_profile"
+            android:layout_below="@id/reg_dateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="?attr/colorOnSecondary"/>
+
+        <TextView
+            android:id="@+id/count_openLabel"
+            android:layout_below="@id/registration_date_setting_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Количество открытий приложения:"
+            android:textSize="13sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/count_open_setting_profile"
+            android:layout_below="@id/count_openLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="?attr/colorOnSecondary"/>
+
+        <View
+            android:layout_below="@id/count_open_setting_profile"
+            android:id="@+id/View1_setting_profile"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_below="@+id/View1_setting_profile"
+            android:id="@+id/history_groupLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="История выбранных групп:"
+            android:textSize="13sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginStart="16dp"/>
+
+        <ScrollView
+            android:layout_below="@+id/history_groupLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/history_group_setting_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSecondary"/>
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/delete_profile_setting_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_person_remove"
+            android:padding="10dp"
+            app:tint="@color/red"
+            android:background="@drawable/background_button_add"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
